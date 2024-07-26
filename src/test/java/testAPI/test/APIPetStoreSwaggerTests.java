@@ -43,7 +43,6 @@ public class APIPetStoreSwaggerTests {
         var petModifiedInfo = DataGenerator.getСorrectModifiedInfoPetAPI();
         var actualRequest = APIHelper.sendRequestPutPet(petModifiedInfo, 200);
         System.out.println("запрос  === " + actualRequest);
-        //System.out.println("запрос id == " + actualRequest.getId() + " запрос status == " + actualRequest.getStatus()) ;
         Assertions.assertEquals("Filin", actualRequest.getCategory().getName());
         Assertions.assertEquals("unavailable", actualRequest.getStatus());
     }
